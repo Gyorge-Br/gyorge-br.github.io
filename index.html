@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./imgs/Tudoemum.png">
+    <title>Gyorge</title>
+</head>
+<body>
+    <header>
+        <h1 id="Titulo">Página do Gyorge</h1>
+        <div id="Guias">
+            <p>Projetos</p>
+            <a id="Linkbutton" href="https://gyorge-escola.github.io/">Escola</a>
+            <a id="Linkbutton" href="foradear">Pessoais</a>
+            <button id="ButTema" onclick="MudarTema()"></button>
+        </div>
+    </header>
+    <bodys>
+        <div id="PQMG">
+            <h2>Meus projetos</h2>
+            <div id="Amostra">
+                <div class="cadadiv">
+                    <txt class="txt">Layouts Do Fabio</txt>
+                    <img class="tumbs" src="./imgs/layoutdofabio.png">
+                    <a class="a" href="https://gyorge-escola.github.io">Veja</a>
+                    <dsc class="dsc">Layouts que fiz durante a aula de Front-end na escola</dsc>
+                </div>
+                <div class="cadadiv">
+                    <txt class="txt">Tabelador</txt>
+                    <img class="tumbs" src="./imgs/tabelador.png">
+                    <a class="a" href="https://gyorge-br.github.io/Tabelador/">Veja</a>
+                    <dsc class="dsc">Site/aplicativo web que eu fiz para tentar organizar melhor certos dados</dsc>
+                </div>
+                    <div class="cadadiv">
+                    <txt class="txt">Kiosk</txt>
+                    <img class="tumbs" src="./imgs/kiosk.png">
+                    <a class="a" href="https://gyorge-br.github.io/Kiosk-linux/">Veja</a>
+                    <dsc class="dsc">Base para criação de um usuário kiosk no Linux</dsc>
+                </div>
+            </div>
+        </div>
+    </bodys>
+    <footer>
+        <p>Criação: 25 de Junho, 2025</p> <p>Última atualização: 25 de Junho, 2025</p>
+    </footer>
+    <script>
+        
+        let temaatual = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (temaatual) {
+            document.getElementById("ButTema").innerText = "🌓"
+            temaatual = false
+        } else {
+            document.getElementById("ButTema").innerText = "☀️" 
+            temaatual = true
+        }
+        function MudarTema() { 
+            document.body.classList.toggle('tema2');
+            if (temaatual) {
+                document.getElementById("ButTema").innerText = "🌓"
+                temaatual = false
+            } else {
+               document.getElementById("ButTema").innerText = "☀️" 
+               temaatual = true
+            }
+        }
+    </script>
+</body>
+</html>
